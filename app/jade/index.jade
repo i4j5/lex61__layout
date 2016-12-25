@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+    meta(charset="UTF-8")
+    title Document
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="format-detection" content="telephone=no")
+    //build:css css/all.css
+    link(rel="stylesheet", href="tmp/fonts.css")
+    link(rel="stylesheet", href="tmp/style.css")
+    //endbuild
+body.page
+    .header
+        .container
+            .row
+                .row__col.row__col_s_2
+                    .header__logo
+                .row__col.row__col_s_5
+                    .nav
+                        a.nav__item.nav__item_active Услуги
+                        a.nav__item О компании
+                        a.nav__item Отзывы
+                        a.nav__item Контакты
+                        a.nav__item Статьи
+                .row__col.row__col_s_5
+                    .header__right
+                        .header__phone.n-deco 
+                            |8 (914) 432-18-18
+                        .callme Заказать звонок
+    .offer
+        .offer__title.offer__title_text_before Юридические услуги
+        .offer__title Консультации и документы от ведущих<br>юристов в удобном формате
+
+    //build:js js/all.js
+    //- script(src=".tmp/index.js")
+    //endbuild

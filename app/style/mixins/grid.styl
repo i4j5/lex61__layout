@@ -1,0 +1,25 @@
+grid-columns = 12 
+grid-gutter-width = 30px
+
+row()
+    margin-left -(grid-gutter-width / 2)
+    margin-right -(grid-gutter-width / 2)
+    &:after
+        content ""
+        display table
+        clear both
+    &__col
+        position relative
+        min-height 1px
+        float left
+        padding-left  (grid-gutter-width / 2)
+        padding-right (grid-gutter-width / 2)
+
+col(grid-devices = 's')
+    &__col
+        for index in 1..grid-columns
+            &_{grid-devices}_{index}
+                width 100% * (index / grid-columns)
+            &_{grid-devices}_offset_{index}
+                margin-left 100% * (index / grid-columns)
+                

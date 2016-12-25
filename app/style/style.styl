@@ -1,0 +1,110 @@
+@import 'utilities/reset.styl' 
+
+@require "mixins/grid.styl"
+.row
+    row()
+    col('s')
+    @media (min-width: 768px)
+        col('m')
+    @media (min-width: 1200px)
+        col('l')
+
+.container
+    width 100%
+    max-width 1200px
+    min-width 320px
+    margin auto
+    
+.page
+    font-family 'MuseoSans'
+    font-weight 300
+    font-size 14px
+    line-height 1.2em
+    min-height 2000px
+
+.header
+    position fixed
+    top 0px
+    left 0px
+    right 0px
+    width 100%
+    height 60px
+    background-color rgb(48, 55, 59)
+    border-bottom 2px solid #292f32
+    &__logo
+        background url('../img/logo.png')
+        background-repeat no-repeat
+        width 141px
+        height 60px
+        background-position center
+    &__phone
+        font-weight 900
+        font-size 16px
+        color #fff
+        display inline-block
+        height 60px
+        line-height 60px
+        margin-right 20px
+    &__right
+        display inline-block
+        float right
+        
+.nav
+    width 100%
+    &__item
+        text-transform uppercase
+        cursor pointer
+        display inline-block
+        height 60px
+        line-height 60px
+        font-size 12px
+        font-weight 500
+        color #fafafa
+        margin-right 30px
+        transition all 0.2s ease
+        border-bottom 0px solid rgba(0,0,0,0)
+        &:hover
+            border-bottom 3px solid #fafafa
+        &_active
+            border-bottom 3px solid #fafafa
+        
+.callme
+    cursor pointer
+    font-weight 500
+    font-size 14px
+    line-height 1em
+    color #fff
+    border-radius 3px
+    padding .5em 10px .5em 42px
+    display inline-block
+    background #de4544 url(../img/callme__icon.png) 10px center no-repeat
+    transition all 0.55s ease
+    &:hover
+        background-color #b42524  
+    
+.offer
+    width 100%
+    height 700px
+    background-color #607677 
+    background-image url('../img/offer__overlay.png'), 
+        linear-gradient(0deg, rgba(0, 0, 0, .7) 10px, rgba(255, 255, 255, .3)), 
+        linear-gradient(60deg, rgba(75, 100, 100, .3) 5%, rgba(0, 228, 255, .2)), 
+        url('../img/offer__bg.jpg')
+    background-repeat repeat, no-repeat, no-repeat, no-repeat
+    background-position top left, center center, bottom top, bottom center
+    background-size 100px 100px, cover, cover, cover
+    background-attachment fixed, scroll, fixed, fixed
+    &__title
+        text-shadow 1px 1px 5px #5b7d80
+        font-size 30px
+        line-height 40px
+        font-weight 700
+        color #fff 
+        text-align center
+        text-transform uppercase
+        &_text_before
+            padding-top 200px
+            padding-bottom 30px
+            font-size 22px
+            line-height 1em
+        
