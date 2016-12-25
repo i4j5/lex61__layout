@@ -13,16 +13,20 @@ body.page
     .header
         .container
             .row
-                .row__col.row__col_s_2
+                .row__col.row__col_s_12
                     .header__logo
-                .row__col.row__col_s_5
                     .nav
-                        a.nav__item.nav__item_active Услуги
-                        a.nav__item О компании
-                        a.nav__item Отзывы
-                        a.nav__item Контакты
-                        a.nav__item Статьи
-                .row__col.row__col_s_5
+                        .nav__toggle#nav__toggle
+                           .nav__icon-bar
+                           .nav__icon-bar
+                           .nav__icon-bar
+                        .nav__items#nav__items
+                            .nav__close#nav__close
+                            a.nav__item.nav__item_active Услуги
+                            a.nav__item О компании
+                            a.nav__item Отзывы
+                            a.nav__item Контакты
+                            a.nav__item Статьи
                     .header__right
                         .header__phone.n-deco 
                             |8 (914) 432-18-18
@@ -32,5 +36,5 @@ body.page
         .offer__title Консультации и документы от ведущих<br>юристов в удобном формате
 
     //build:js js/all.js
-    //- script(src=".tmp/index.js")
+    script(src="tmp/nav.js")
     //endbuild

@@ -14,13 +14,18 @@
   <div class="header">
     <div class="container">
       <div class="row">
-        <div class="row__col row__col_s_2">
+        <div class="row__col row__col_s_12">
           <div class="header__logo"></div>
-        </div>
-        <div class="row__col row__col_s_5">
-          <div class="nav"><a class="nav__item nav__item_active">Услуги</a><a class="nav__item">О компании</a><a class="nav__item">Отзывы</a><a class="nav__item">Контакты</a><a class="nav__item">Статьи</a></div>
-        </div>
-        <div class="row__col row__col_s_5">
+          <div class="nav">
+            <div id="nav__toggle" class="nav__toggle">
+              <div class="nav__icon-bar"></div>
+              <div class="nav__icon-bar"></div>
+              <div class="nav__icon-bar"></div>
+            </div>
+            <div id="nav__items" class="nav__items">
+              <div id="nav__close" class="nav__close"></div><a class="nav__item nav__item_active">Услуги</a><a class="nav__item">О компании</a><a class="nav__item">Отзывы</a><a class="nav__item">Контакты</a><a class="nav__item">Статьи</a>
+            </div>
+          </div>
           <div class="header__right">
             <div class="header__phone n-deco">
                
@@ -37,5 +42,6 @@
     <div class="offer__title">Консультации и документы от ведущих<br>юристов в удобном формате</div>
   </div>
   <!--build:js js/all.js-->
+  <script src="tmp/nav.js"></script>
   <!--endbuild-->
 </body>
