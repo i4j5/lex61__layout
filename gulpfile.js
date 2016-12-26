@@ -20,12 +20,18 @@ gulp.task('browser-sync', () => {
     browserSync.init({
         server: {
             baseDir: './app'
-        }
+        },
+        directory: true,
+        port: 3000,
+        open: false
     });
+
+    browserSync.watch('./app/tmp/**/*.*').on('change', browserSync.reload);
+    browserSync.watch('./app/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('clean', () => {
-    return gulp.src(['./app/tmp/**/*.*', './app/*.html', './dist'], {read: false})
+gulp.task('clean', (cb) => {
+    return gulp.src(['./app/*.html', './app/tmp/**/*.*', './dist'], {read: false})
         .pipe(clean());
 });
 
@@ -125,7 +131,6 @@ gulp.task('watch', () => {
     gulp.watch('./app/jade/**/*.jade', ['jade']);
     gulp.watch('./app/style/**/*.styl', ['style']);
     gulp.watch('./app/webpack/**/*.*', ['webpack']);
-    gulp.watch('./app/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['clean', 'jade', 'style', 'js', 'webpack', 'browser-sync', 'watch']);
+gulp.task('default', ['clean', 'style', 'js', 'webpack', 'jade', 'browser-sync', 'watch']);
