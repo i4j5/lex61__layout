@@ -1,6 +1,12 @@
 (()=>{
 
-    let offer = document.getElementById('offer');
-    let bodyWidth = document.body.clientWidth;
+    const offer = document.getElementById('offer');
+    
+    let resizOffer = () => {
+        offer.style.height = document.documentElement.clientHeight + 'px';
+    };
 
+    window.addEventListener('load', resizOffer);
+    window.addEventListener('resize', resizOffer);
+    
 })();
