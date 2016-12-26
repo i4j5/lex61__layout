@@ -1,15 +1,15 @@
 (()=>{
 
     let toggle = document.getElementById('nav__toggle');
-    let items = document.getElementById('nav__items');
+    let wrapper = document.getElementById('nav__wrapper');
     let close = document.getElementById('nav__close');
 
     toggle.addEventListener('click', () => {
-        items.classList.add('nav__items_active');
+        wrapper.classList.add('nav__wrapper_active');
     });
 
     close.addEventListener('click', () => {
-        items.classList.remove('nav__items_active');
+        wrapper.classList.remove('nav__wrapper_active');
     });
 
 })()
