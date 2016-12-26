@@ -60,10 +60,10 @@ gulp.task('jade', () => {
             })
         }))
         .pipe(jade({pretty: true}))
-        .pipe(rename((path) => {
-            path.dirname = '';
-            path.extname = '.html'
-        }))
+        // .pipe(rename((path) => {
+        //     path.dirname = '';
+        //     path.extname = '.html'
+        // }))
         .pipe(gulp.dest('./app'));
 });
 
@@ -125,11 +125,7 @@ gulp.task('watch', () => {
     gulp.watch('./app/jade/**/*.jade', ['jade']);
     gulp.watch('./app/style/**/*.styl', ['style']);
     gulp.watch('./app/webpack/**/*.*', ['webpack']);
-    gulp.watch([
-        './app/*.html',
-        './app/tmp/*.css',
-        './app/tmp/*.js',
-    ]).on('change', browserSync.reload);
+    gulp.watch('./app/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['clean', 'style', 'js', 'webpack', 'jade', 'browser-sync', 'watch']);
+gulp.task('default', ['clean', 'jade', 'style', 'js', 'webpack', 'browser-sync', 'watch']);

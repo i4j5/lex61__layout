@@ -10,7 +10,7 @@ head
     link(rel="stylesheet", href="tmp/style.css")
     //endbuild
 body.page
-    .header
+    .header#header
         .container
             .row
                 .row__col.row__col_s_12
@@ -33,9 +33,42 @@ body.page
                             |8 (914) 432-18-18
                         .callme Заказать звонок
     .offer
-        .offer__title.offer__title_text_before Юридические услуги
-        .offer__title Консультации и документы от ведущих<br>юристов в удобном формате
-
+        .offer__wrapper
+            .offer__title.offer__title_text_before Юридические услуги
+            .offer__title Консультации и документы от ведущих<br>юристов в удобном формате
+    .container
+        .trigger
+            .row
+                .row__col.row__col_s_3
+                    img(src="img/trigger__icon_number_1.png").trigger__icon
+                    .trigger__title 5 лет - минимальный<br>стаж юристов
+                    .trigger__text.
+                        В нашей компании работают только опытные, узкоспециализированные юристы и адвокаты. Они проведут 
+                        детальный правовой анализ Вашего дела и подскажут Вам правильное 
+                        решение
+                .row__col.row__col_s_3
+                    img(src="img/trigger__icon_number_2.png").trigger__icon
+                    .trigger__title Гарантия<br> результата
+                    .trigger__text.
+                        Мы дорожим своей репутацией и всегда доводим до клиента честную и 
+                        объективную информацию о 
+                        перспективах дела
+                .row__col.row__col_s_3
+                    img(src="img/trigger__icon_number_3.png").trigger__icon
+                    .trigger__title Персональный<br> специалист
+                    .trigger__text.
+                        Каждому клиенту назначается 
+                        персональный юрист. Он держит на контроле работу с Вашим делом и 
+                        оказывает полное сервисное 
+                        сопровождение
+                .row__col.row__col_s_3
+                    img(src="img/trigger__icon_number_4.png").trigger__icon
+                    .trigger__title Полная<br> конфиденциальности
+                    .trigger__text.
+                        Мы заботимся о вашей 
+                        конфиденциальности и будем 
+                        прикладывать все необходимые усилия для защиты вашей персональной 
+                        информации
     //build:js js/all.js
     script(src="tmp/nav.js")
     //endbuild

@@ -12,4 +12,4 @@
         wrapper.classList.remove('nav__wrapper_active');
     });
 
-})()
+})();
