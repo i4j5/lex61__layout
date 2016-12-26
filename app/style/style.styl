@@ -74,11 +74,23 @@
         opacity 0
         visibility hidden
         z-index 100
-        transition opacity .3s 0s, visibility 0s 0s
+        transition opacity 200ms 0s, visibility 0s 0s
+        transition 200ms 200ms
         &_active
-            transition opacity .3s 0s, visibility .35s 0s
+            transition opacity 200ms 0s, visibility 250ms 0s
             opacity 1
             visibility visible
+            .nav__item
+                opacity 1 !important 
+                left 0px !important 
+                top 0px !important 
+
+        .nav__item
+            position relative
+            opacity 0
+            left -20px
+            top -20px
+
     &__items
         margin auto
     &__toggle
@@ -148,12 +160,24 @@
         height 22px
         font-weight 500
         color #fafafa
-        transition all 0.2s ease
+        transition all 300ms ease
         border-bottom 0px solid rgba(0,0,0,0)
         &:hover
             border-bottom 3px solid #fafafa
         &_active
             border-bottom 3px solid #fafafa
+        &_position
+            transition = 450ms
+            &_1
+                transition transition, transition
+            &_2
+                transition transition+50, transition+50
+            &_3
+                transition transition+100, transition+100
+            &_4
+                transition transition+150, transition+150
+            &_5
+                transition transition+200, transition+200
         
 .callme
     @media (min-width 580px)
