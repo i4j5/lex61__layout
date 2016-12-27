@@ -4,6 +4,8 @@ grid-gutter-width = 30px
 row()
     margin-left -(grid-gutter-width / 2)
     margin-right -(grid-gutter-width / 2)
+    display flex
+    flex-wrap wrap
     &:after
         content ""
         display table
@@ -20,6 +22,6 @@ col(grid-devices = 's')
         for index in 1..grid-columns
             &_{grid-devices}_{index}
                 width 100% * (index / grid-columns)
-            &_{grid-devices}_offset_{index}
+            &_{grid-devices}-offset_{index}
                 margin-left 100% * (index / grid-columns)
                 

@@ -13,7 +13,7 @@ body.page
     .header#header
         .container
             .row
-                .row__col.row__col_s_12
+                .row__col.row__col_xs_12
                     .header__logo
                     .nav
                         .nav__toggle#nav__toggle
@@ -23,7 +23,7 @@ body.page
                         .nav__wrapper#nav__wrapper
                             .nav__close#nav__close
                             .nav__items
-                                a.nav__item.nav__item_position_1.nav__item_active Услуги
+                                a.nav__item.nav__item_position_1 Услуги
                                 a.nav__item.nav__item_position_2 О компании
                                 a.nav__item.nav__item_position_3 Отзывы
                                 a.nav__item.nav__item_position_4 Контакты
@@ -36,39 +36,71 @@ body.page
         .offer__wrapper
             .offer__title.offer__title_text_before Юридические услуги
             .offer__title Консультации и документы от ведущих<br>юристов в удобном формате
-    .container
-        .trigger
+    .trigger
+        .container
             .row
-                .row__col.row__col_s_3
-                    img(src="img/trigger__icon_number_1.png").trigger__icon
-                    .trigger__title 5 лет - минимальный<br>стаж юристов
-                    .trigger__text.
-                        В нашей компании работают только опытные, узкоспециализированные юристы и адвокаты. Они проведут 
-                        детальный правовой анализ Вашего дела и подскажут Вам правильное 
-                        решение
-                .row__col.row__col_s_3
-                    img(src="img/trigger__icon_number_2.png").trigger__icon
-                    .trigger__title Гарантия<br> результата
-                    .trigger__text.
-                        Мы дорожим своей репутацией и всегда доводим до клиента честную и 
-                        объективную информацию о 
-                        перспективах дела
-                .row__col.row__col_s_3
-                    img(src="img/trigger__icon_number_3.png").trigger__icon
-                    .trigger__title Персональный<br> специалист
-                    .trigger__text.
-                        Каждому клиенту назначается 
-                        персональный юрист. Он держит на контроле работу с Вашим делом и 
-                        оказывает полное сервисное 
-                        сопровождение
-                .row__col.row__col_s_3
-                    img(src="img/trigger__icon_number_4.png").trigger__icon
-                    .trigger__title Полная<br> конфиденциальности
-                    .trigger__text.
-                        Мы заботимся о вашей 
-                        конфиденциальности и будем 
-                        прикладывать все необходимые усилия для защиты вашей персональной 
-                        информации
+                .row__col.row__col_xs_12.row__col_sm_6.row__col_lg_3
+                    .trigger__item
+                        img(src="img/trigger__icon_number_1.png").trigger__icon
+                        .trigger__title 5 лет - минимальный<br>стаж юристов
+                        .trigger__text.
+                            В нашей компании работают только опытные, узкоспециализированные юристы и адвокаты. Они проведут 
+                            детальный правовой анализ Вашего дела и подскажут Вам правильное 
+                            решение
+                .row__col.row__col_xs_12.row__col_sm_6.row__col_lg_3
+                    .trigger__item
+                        img(src="img/trigger__icon_number_2.png").trigger__icon
+                        .trigger__title Гарантия<br> результата
+                        .trigger__text.
+                            Мы дорожим своей репутацией и всегда доводим до клиента честную и 
+                            объективную информацию о 
+                            перспективах дела
+                .row__col.row__col_xs_12.row__col_sm_6.row__col_lg_3
+                    .trigger__item
+                        img(src="img/trigger__icon_number_3.png").trigger__icon
+                        .trigger__title Персональный<br> специалист
+                        .trigger__text.
+                            Каждому клиенту назначается 
+                            персональный юрист. Он держит на контроле работу с Вашим делом и 
+                            оказывает полное сервисное 
+                            сопровождение
+                .row__col.row__col_xs_12.row__col_sm_6.row__col_lg_3
+                    .trigger__item
+                        img(src="img/trigger__icon_number_4.png").trigger__icon
+                        .trigger__title Полная<br> конфиденциальности
+                        .trigger__text.
+                            Мы заботимся о вашей 
+                            конфиденциальности и будем 
+                            прикладывать все необходимые усилия для защиты вашей персональной 
+                            информации
+
+    .causes
+        .causes__wrapper
+            .causes__title 
+                span.causes__namber 5 
+                | причин почему 
+                span.causes__namber 223 
+                | клиента выбрали нас
+            .container
+                .row
+                    .row__col.row__col_xs_12.row__col_sm_6.row__col_md_5
+                        .list
+                            .list__title В других компаниях
+                            .list__item 1. Вашим делом может заниматься студент без стажа работы
+                            .list__item 2. Отсутствие результата при полной оплате за услуги
+                            .list__item 3. Присутствуют скрытые платежи
+                            .list__item 4. Срок в 2–3 раза выше заявленного
+                            .list__item 5. Введение в заблуждение относительно перспектив дела
+                    .row__col.row__col_xs_12.row__col_sm_6.row__col_md_5.row__col_md-offset_2
+                        .list
+                            .list__title В нашей компании
+                            .list__item 1. Минимальный стаж юриста — 6 лет
+                            .list__item 2. Мы не берем с Вас денег, если не можем помочь
+                            .list__item 3. Цена фиксирована и понятна с самого начала
+                            .list__item 4. Мы работаем точно в срок
+                            .list__item 5. Гарантия результата
+
+
     //build:js js/all.js
     script(src="tmp/offer.js")
     script(src="tmp/nav.js")

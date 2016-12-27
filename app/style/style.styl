@@ -3,11 +3,13 @@
 @require "mixins/grid.styl"
 .row
     row()
-    col('s')
-    @media (min-width 1040px)
-        col('m')
+    col('xs') //Extra small devices 
+    @media (min-width 768px)
+        col('sm') //Small devices Tablets 
+    @media (min-width 992px)
+        col('md') //Medium devices Desktops 
     @media (min-width 1200px)
-        col('l')
+        col('lg') //Large devices Desktops 
 
 .container
     width 100%
@@ -125,6 +127,9 @@
             margin-right 30px !important
             text-align left !important
             font-size 12px !important
+            opacity 1 !important
+            left 0px !important
+            top 0px !important
     &__close
         display block
         position absolute
@@ -229,7 +234,8 @@
         
 .trigger
     width 100%
-    padding 40px 0px
+    padding 40px 0px 20px 0px
+    // margin 0px -15px
     &__title
         font-size 16px
         line-height 18px
@@ -245,5 +251,48 @@
         font-weight 300
     &__icon
         margin-right 15px
+        ////@media (min-width 1070px)
         float left
     
+    &__item
+        margin-bottom 20px
+        
+.causes
+    width 100%
+    background-color #fff 
+    background-image url('../img/offer__overlay.png'), 
+        linear-gradient(0deg, rgba(0, 0, 0, .4) 10px, rgba(255, 255, 255, .3)),
+        url('../img/causes__bg.jpg')
+    background-repeat repeat, no-repeat, no-repeat
+    background-position top left, bottom top, bottom center
+    background-size 100px 100px, cover, cover
+    background-attachment fixed, scroll, fixed
+    &__wrapper
+         padding 90px 0px
+         background-color rgba(255, 255, 255, .4)
+    &__title
+        text-align center
+        text-transform uppercase
+        color #c2984f
+        font-size 25px
+        line-height 1.2em
+        font-weight 700
+        margin-bottom 60px
+    &__namber
+        font-size 30px
+    
+.list
+    &__title
+        text-align center
+        font-weight 900
+        font-size 18px
+        line-height 1.2em
+        color #30373b
+        margin-bottom 25px
+        margin-top 20px
+    &__item
+        font-size 16px
+        font-weight 500
+        color #000
+        line-height 1.2em
+        margin-bottom 20px
