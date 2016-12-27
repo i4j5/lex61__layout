@@ -22,7 +22,6 @@
     font-weight 300
     font-size 14px
     line-height 1.2em
-    min-height 2000px
     overflow auto
     
 .header
@@ -183,47 +182,54 @@
                 transition transition+150, transition+150
             &_5
                 transition transition+200, transition+200
-        
-.callme
-    @media (min-width 580px)
-        display inline-block
+.btn
+    background-color #de4544
+    transition all 0.55s ease 
     cursor pointer
     font-weight 500
     font-size 14px
     line-height 1em
     color #fff
     border-radius 3px
+    padding .5em 1em
+    display inline-block 
+    &:hover
+        background-color #b42524      
+.callme
+    @media (min-width 580px)
+        display inline-block
     padding .5em 10px .5em 42px
     display none
-    background #de4544 url(../img/callme__icon.png) 10px center no-repeat
-    transition all 0.55s ease
+    background-image url(../img/callme__icon.png) 
+    background-position  10px center 
+    background-repeat no-repeat
     margin-left 20px
-    &:hover
-        background-color #b42524  
+ 
     
 .offer
     display flex
     flex-direction column
     width 100%
     height 100%
-    min-height 300px
+    min-height 400px
     background-color #607677 
     background-image url('../img/offer__overlay.png'), 
-        linear-gradient(0deg, rgba(0, 0, 0, .7) 10px, rgba(255, 255, 255, .3)), 
-        linear-gradient(60deg, rgba(75, 100, 100, .3) 5%, rgba(0, 228, 255, .2)), 
+        linear-gradient(0deg, rgba(0, 0, 0, .7) 10px, rgba(255, 255, 255, .3)),
+        linear-gradient(60deg, rgba(87, 197, 212, 0.4), 5%, rgba(89, 197, 209, 0.2) ), 
         url('../img/offer__bg.jpg')
     background-repeat repeat, no-repeat, no-repeat, no-repeat
     background-position top left, center center, bottom top, bottom center
-    background-size 100px 100px, cover, cover, cover
+    background-size 50px 50px, cover, cover, cover
     background-attachment fixed, scroll, fixed, fixed
     &__wrapper
         margin auto
+        text-shadow 1px 1px 1px rgba(0,0,0,.1)
+        color #fff 
     &__title
-        text-shadow 1px 1px 5px #5b7d80
+        // text-shadow 1px 1px 5px #5b7d80
         font-size 30px
         line-height 40px
         font-weight 700
-        color #fff 
         text-align center
         text-transform uppercase
         &_text_before
@@ -231,6 +237,15 @@
             padding-bottom 30px
             font-size 22px
             line-height 1em
+    &__address
+        font-size 18px
+        line-height 34px 
+        height 34px
+        padding-left 50px
+        margin 40px auto 0px
+        display table
+        background url('../img/offer__address.png') left center no-repeat
+        font-weight 700
         
 .trigger
     width 100%
@@ -256,20 +271,25 @@
     
     &__item
         margin-bottom 20px
+
+// .services
+//     height 400px
         
 .causes
+    border-top 2px solid #afb1b1
+    border-bottom 2px solid #afb1b1
     width 100%
     background-color #fff 
     background-image url('../img/offer__overlay.png'), 
-        linear-gradient(0deg, rgba(0, 0, 0, .4) 10px, rgba(255, 255, 255, .3)),
+        linear-gradient( to bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.2) 20%, rgba(255,255,255,0.2) 80%, rgba(0,0,0,0.3) 100% ),
         url('../img/causes__bg.jpg')
     background-repeat repeat, no-repeat, no-repeat
-    background-position top left, bottom top, bottom center
+    background-position top left, bottom top, center center
     background-size 100px 100px, cover, cover
-    background-attachment fixed, scroll, fixed
+    // background-attachment fixed, fixed, fixed
     &__wrapper
          padding 90px 0px
-         background-color rgba(255, 255, 255, .4)
+         background-color rgba(255, 255, 255, .3)
     &__title
         text-align center
         text-transform uppercase
@@ -296,3 +316,40 @@
         color #000
         line-height 1.2em
         margin-bottom 20px
+        
+.working
+    width 100%
+    padding 60px 0px 70px
+    &__title
+        text-transform uppercase
+        font-size 30px 
+        line-height 1.2em
+        margin-bottom 40px
+        color #000
+        font-weight 500
+        text-align center
+    &__arrow
+        background url('../img/working__arrow.png') center no-repeat
+        width 65px
+        height 35px
+        margin 30px auto
+        @media (min-width 992px)
+            transform rotate(-90deg)
+    
+.step
+    max-width 380px
+    margin auto
+    text-align center
+    &__title
+        color #000
+        font-size 16px 
+        line-height 1.1em
+        font-weight 900
+        margin-bottom 10px
+    &__text
+        font-size 14px
+        line-height 1.3em
+        font-weight 500
+        color #000
+        margin-bottom 10px
+    

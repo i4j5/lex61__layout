@@ -31,11 +31,12 @@ body.page
                     .header__right
                         .header__phone.n-deco 
                             |8 (914) 432-18-18
-                        .callme Заказать звонок
+                        .callme.btn Заказать звонок
     .offer#offer
         .offer__wrapper
             .offer__title.offer__title_text_before Юридические услуги
             .offer__title Консультации и документы от ведущих<br>юристов в удобном формате
+            .offer__address с. Чалтырь, ул. 7-я Линия, д. 7A
     .trigger
         .container
             .row
@@ -73,6 +74,7 @@ body.page
                             конфиденциальности и будем 
                             прикладывать все необходимые усилия для защиты вашей персональной 
                             информации
+    .services
 
     .causes
         .causes__wrapper
@@ -99,8 +101,30 @@ body.page
                             .list__item 3. Цена фиксирована и понятна с самого начала
                             .list__item 4. Мы работаем точно в срок
                             .list__item 5. Гарантия результата
+    .working
+        .container
+            .working__title Как мы работаем
+            .row
+                .row__col.row__col_xs_12.row__col_md_3
+                    .step
+                        .step__title Заявка на консультацию
+                        .step__text Отправьте заявку с сайта или обратитесь в наш офисф
+                        .btn Оставить заявку
+                .row__col.row__col_xs_12.row__col_md_1
+                    .working__arrow
+                .row__col.row__col_xs_12.row__col_md_4
+                    .step
+                        .step__title Заключение договора
+                        .step__text Мы заключаем договор и производим детальный анализ Вашего дела, далее происходит назначение персонального юрист
+                .row__col.row__col_xs_12.row__col_md_1
+                    .working__arrow
+                .row__col.row__col_xs_12.row__col_md_3
+                    .step
+                        .step__title Конечный результат
+                        .step__text МУспешное представление Ваших интересов. Вы становитесь ещё одним благодарным клиентом
 
-
+    //- .maps
+    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OHQL07SyRZQs8McMnL8OHW2WRkEoDVTS&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
     //build:js js/all.js
     script(src="tmp/offer.js")
     script(src="tmp/nav.js")
