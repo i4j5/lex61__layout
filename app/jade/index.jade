@@ -74,7 +74,23 @@ body.page
                             конфиденциальности и будем 
                             прикладывать все необходимые усилия для защиты вашей персональной 
                             информации
-    .services
+
+    .action
+        .container
+            .row
+                .row__col.row__col_xs_10.row__col_xs-offset_1
+                    .form
+                        .form__title Оставьте заявку  на Бесплатную онсультацию
+                        .row
+                            .row__col.row__col_xs_12.row__col.row__col_sm_6.row__col.row__col_md_4
+                                input(placeholder="Введите Ваше имя").input.input_name.input_icon
+                            .row__col.row__col_xs_12.row__col_sm_6.row__col_md_4
+                                input(placeholder="Введите Ваш телефон").input.input_phone.input_icon
+                            .row__col.row__col_xs_12.row__col_md_4
+                                .form__btn.btn Отправить
+    
+    //- Услуги 
+    
 
     .causes
         .causes__wrapper
@@ -123,9 +139,14 @@ body.page
                         .step__title Конечный результат
                         .step__text МУспешное представление Ваших интересов. Вы становитесь ещё одним благодарным клиентом
 
+    
+
+    //- Подвал
+
+
     //- .maps
-    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OHQL07SyRZQs8McMnL8OHW2WRkEoDVTS&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
-    //build:js js/all.js
+    //- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OHQL07SyRZQs8McMnL8OHW2WRkEoDVTS&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
+    //- //build:js js/all.js
     script(src="tmp/offer.js")
     script(src="tmp/nav.js")
     //endbuild

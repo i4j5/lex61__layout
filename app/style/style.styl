@@ -205,7 +205,6 @@
     background-repeat no-repeat
     margin-left 20px
  
-    
 .offer
     display flex
     flex-direction column
@@ -223,13 +222,13 @@
     background-attachment fixed, scroll, fixed, fixed
     &__wrapper
         margin auto
-        text-shadow 1px 1px 1px rgba(0,0,0,.1)
+        // text-shadow 1px 1px 1px rgba(0, 0, 0, .1)
         color #fff 
     &__title
-        // text-shadow 1px 1px 5px #5b7d80
+        text-shadow 1px 1px 5px #5b7d80
         font-size 30px
-        line-height 40px
-        font-weight 700
+        line-height 45px
+        font-weight 800
         text-align center
         text-transform uppercase
         &_text_before
@@ -242,15 +241,21 @@
         line-height 34px 
         height 34px
         padding-left 50px
-        margin 40px auto 0px
+        margin 60px auto 0px
         display table
         background url('../img/offer__address.png') left center no-repeat
         font-weight 700
         
 .trigger
     width 100%
-    padding 40px 0px 20px 0px
+    padding 40px 0px 15px 0px
     // margin 0px -15px
+    background #fff
+    // background-image url('../img/offer__overlay.png')
+    // background-repeat repeat
+    // background-position top left
+    // background-size 80px 80px
+    // background-attachment fixed
     &__title
         font-size 16px
         line-height 18px
@@ -276,8 +281,8 @@
 //     height 400px
         
 .causes
-    border-top 2px solid #afb1b1
-    border-bottom 2px solid #afb1b1
+    // border-top 2px solid #afb1b1
+    // border-bottom 2px solid #afb1b1
     width 100%
     background-color #fff 
     background-image url('../img/offer__overlay.png'), 
@@ -320,6 +325,8 @@
 .working
     width 100%
     padding 60px 0px 70px
+    background #fff
+
     &__title
         text-transform uppercase
         font-size 30px 
@@ -352,4 +359,60 @@
         font-weight 500
         color #000
         margin-bottom 10px
+
+.form
+    margin 50px 0px
+    width 100%
+    background #eeefef
+    border-radius 3px
+    padding 40px 60px
+    &__title
+        content ''
+        line-height 1.5em
+        font-weight 500
+        color #020202
+        text-align center
+        text-transform uppercase
+        font-size 18px
+        margin-bottom 30px
+    &__btn
+        height 40px
+        line-height 40px
+        width 100%
+        padding 0px
+        text-align center
+        font-weight 700
+
+.action
+    width 100%
+    background #455658
+
+.input
+    color #020202
+    font-size 14px
+    height 40px
+    width 100%
+    text-align left
+    border-radius 2px
+    border 1px solid #d5d5d5
+    box-shadow inset 0px 2px 8px rgba(162, 162, 162, 0.3)
+    background-color #fff
+    &_icon
+        background-repeat no-repeat
+        background-position 10px center
+        padding-left 45px
+        padding-right 5px
+    &_name
+        background-image url(../img/input_name.png)
+    &_phone
+        background-image url(../img/input_phone.png)
     
+placeholder = #bfbfbf
+.input::-webkit-input-placeholder
+    color placeholder
+.input::-moz-placeholder
+    color placeholder
+.input:-moz-placeholder
+    color placeholder
+.input:-ms-input-placeholder
+    color placeholder
