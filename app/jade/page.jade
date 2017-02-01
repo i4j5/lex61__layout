@@ -7,6 +7,7 @@ head
     meta(name="format-detection" content="telephone=no")
     //build:css css/all.css
     link(rel="stylesheet", href="tmp/fonts.css")
+    link(rel="stylesheet", href="tmp/modal.css")
     link(rel="stylesheet", href="tmp/style.css")
     //endbuild
 body.page
@@ -95,7 +96,28 @@ body.page
     //- .maps
     //- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OHQL07SyRZQs8McMnL8OHW2WRkEoDVTS&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
     //- 
+
+    .modal.modal_theme_grey#callme
+        .modal__wrapper
+            .modal__dialog
+                .modal__close
+                |dsd
+
+
     //build:js js/all.js
     //- script(src="tmp/offer.js")
+    script(src="tmp/modal.js")
     script(src="tmp/nav.js")
+    script.
+        (()=>{
+
+            let modal_callme = new Modal('callme');
+            let btns_callme = document.getElementsByClassName('callme');
+
+            for (var i = btns_callme.length - 1; i >= 0; i--) {
+                btns_callme[i].addEventListener('click', () => {
+                    modal_callme.open();
+                })
+            }
+        })()
     //endbuild
