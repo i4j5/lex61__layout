@@ -79,19 +79,6 @@ body.page
                             прикладывать все необходимые усилия для защиты вашей персональной 
                             информации
 
-    //- .action
-        .container
-            .row
-                .row__col.row__col_xs_10.row__col_xs-offset_1
-                    .form
-                        .form__title Оставьте заявку  на Бесплатную онсультацию
-                        .row
-                            .row__col.row__col_xs_12.row__col.row__col_sm_6.row__col.row__col_md_4
-                                input(placeholder="Введите Ваше имя").input.input_name.input_icon
-                            .row__col.row__col_xs_12.row__col_sm_6.row__col_md_4
-                                input(placeholder="Введите Ваш телефон").input.input_phone.input_icon
-                            .row__col.row__col_xs_12.row__col_md_4
-                                .form__btn.btn Отправить
     
     .services
         .services__wrapper
@@ -196,10 +183,249 @@ body.page
                         .step__title Конечный результат
                         .step__text Мы успешное представление Ваших интересов. Вы становитесь ещё одним благодарным клиентом
 
+    //-.action
+        .container
+            .row
+                .row__col.row__col_xs_10.row__col_xs-offset_1
+                    .form
+                        .form__title Оставьте заявку  на Бесплатную онсультацию
+                        .row
+                            .row__col.row__col_xs_12.row__col.row__col_sm_6.row__col.row__col_md_4
+                                input(placeholder="Введите Ваше имя").input.input_name.input_icon
+                            .row__col.row__col_xs_12.row__col_sm_6.row__col_md_4
+                                input(placeholder="Введите Ваш телефон").input.input_phone.input_icon
+                            .row__col.row__col_xs_12.row__col_md_4
+                                .form__btn.btn Отправить
+
+
     //- Отзывы
 
-    .maps
-    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OHQL07SyRZQs8McMnL8OHW2WRkEoDVTS&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
+    .map
+        #map
+        #zoom-in +
+        #zoom-out -
+        .map__footer с. Чалтырь, ул. 7-я Линия, д. 7A
+
+
+    //-.maps
+    script.
+        function initMap() {
+
+            var main_color = '#c2984f', //основной цвет
+                saturation_value= -25, //насыщенность
+                brightness_value= 1; //яркость
+
+            var style= [ 
+                {
+                    //Насыщенность обозначений на карте
+                    elementType: "labels",
+                    stylers: [
+                        {saturation: saturation_value}
+                    ]
+                },  
+                {   //Скрываем обозначения станций метро, вокзалов, аэропортов и прочих транспортных узов на карте
+                    featureType: "poi",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    //Скрываем обозначение дорог на карте
+                    featureType: 'road.highway',
+                    elementType: 'labels',
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                }, 
+                {   
+                    //Скрываем обозначение локальных дорог
+                    featureType: "road.local", 
+                    elementType: "labels.icon", 
+                    stylers: [
+                        {visibility: "off"} 
+                    ] 
+                },
+                { 
+                    //Скрываем обозначение магистрали на карте
+                    featureType: "road.arterial", 
+                    elementType: "labels.icon", 
+                    stylers: [
+                        {visibility: "off"}
+                    ] 
+                },
+                {
+                    //Скрываем дорожные обозначения на карте
+                    featureType: "road",
+                    elementType: "geometry.stroke",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                }, 
+                //Стили для разных элементов на карте
+                { 
+                    featureType: "transit", 
+                    elementType: "geometry.fill", 
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                }, 
+                {
+                    featureType: "poi",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                },
+                {
+                    featureType: "poi.government",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                },
+                {
+                    featureType: "poi.sport_complex",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                },
+                {
+                    featureType: "poi.attraction",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                },
+                {
+                    featureType: "poi.business",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                },
+                {
+                    featureType: "transit",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                },
+                {
+                    featureType: "transit.station",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                },
+                {
+                    featureType: "landscape",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                    
+                },
+                {
+                    featureType: "road",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                },
+                {
+                    featureType: "road.highway",
+                    elementType: "geometry.fill",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                }, 
+                {
+                    featureType: "water",
+                    elementType: "geometry",
+                    stylers: [
+                        { hue: main_color },
+                        { visibility: "on" }, 
+                        { lightness: brightness_value }, 
+                        { saturation: saturation_value }
+                    ]
+                }
+            ];
+
+           map = new google.maps.Map(document.getElementById('map'), {
+             center: {
+                lat: 47.228534, 
+                lng: 39.754988
+            },
+             zoom: 18,
+             mapTypeControl: false,
+             panControl: false,
+             zoomControl: false,
+             mapTypeControl: false,
+             streetViewControl: false,
+             mapTypeId: google.maps.MapTypeId.ROADMAP,
+             scrollwheel: false,
+             styles: style
+           });
+
+           var marker = new google.maps.Marker({
+                position: {
+                    lat: 47.228534, 
+                    lng: 39.754988
+                },
+               map: map,
+               visible: true,
+                icon: 'img/map__marker.png',
+                title: "lex61.ru - главный офис"
+           });
+
+            var controlUIzoomIn= document.getElementById('zoom-in'),
+                controlUIzoomOut= document.getElementById('zoom-out');
+
+            google.maps.event.addDomListener(controlUIzoomIn, 'click', function() {
+                map.setZoom(map.getZoom()+1)
+            });
+            google.maps.event.addDomListener(controlUIzoomOut, 'click', function() {
+                map.setZoom(map.getZoom()-1)
+            });
+        }
+
+
+    script(type="text/javascript" charset="utf-8" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTaMXmyz4qCiQJJlJZw6LlOnA2EEuZjlo&callback=initMap" async defer)
+
 
     .footer
         | © 2016 ЗаконЪ. Юридическая компания. Все права защищены.
