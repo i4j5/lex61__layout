@@ -627,8 +627,9 @@ placeholder = #bfbfbf
     
 
 
+map-height = 400px
 .map
-    height 400px
+    height map-height
     width 100%
     position relative
     &__footer
@@ -642,27 +643,46 @@ placeholder = #bfbfbf
         font-size 14px
         padding 10px
         text-align center
+    &__zoom-in
+    &__zoom-out
+        cursor pointer
+        position absolute
+        z-index 10
+        width 30px 
+        height 30px 
+        background-color #fff
+        border-radius 30px
+        box-shadow 0 1px 0 0 rgba(0,0,0,.12), 0 5px 10px -3px rgba(0,0,0,.3)
+        &:after
+        &:before
+            content ''
+            display table
+            clear both
+            background rgba(49, 55, 59, 0.85)
+            position absolute
+            top 50%
+            left 50%
+    &__zoom-in
+        top ((map-height / 2) - 20)
+        left 20px
+        &:after
+            height 2px
+            width 14px
+            margin-left -7px 
+            margin-top -1px
+        &:before
+            height 15px
+            width 2px
+            margin-left -1px 
+            margin-top -7px
+    &__zoom-out
+        top ((map-height / 2) + 20)
+        left 20px
+        &:after
+            height 2px
+            width 14px
+            margin-left -7px 
+            margin-top -1px
 #map
     height 100%
     
-#zoom-in
-#zoom-out
-    cursor pointer
-    position absolute
-    z-index 10
-    width 30px 
-    height 30px 
-    background-color #c2984f
-    border-radius 20px
-    color #31373b
-    line-height 30px
-    text-align center
-    font-weight 900
-    font-size 16px
-    
-#zoom-in
-    top 10px
-    left 10px
-#zoom-out
-    top 45px
-    left 10px
