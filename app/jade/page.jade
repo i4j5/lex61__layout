@@ -95,15 +95,15 @@ body.page
     script(src="tmp/modal.js")
     script(src="tmp/nav.js")
     script.
-        //- (()=>{
+        (()=>{
 
-        //-     let modal_callme = new Modal('callme');
-        //-     let btns_callme = document.getElementsByClassName('callme');
+            let modal_callme = new Modal('callme');
+            let btns_callme = document.getElementsByClassName('callme');
 
-        //-     for (var i = btns_callme.length - 1; i >= 0; i--) {
-        //-         btns_callme[i].addEventListener('click', () => {
-        //-             modal_callme.open();
-        //-         })
-        //-     }
-        //- })()
+            for (var i = btns_callme.length - 1; i >= 0; i--) {
+                btns_callme[i].addEventListener('click', () => {
+                    modal_callme.open();
+                })
+            }
+        })()
     //endbuild

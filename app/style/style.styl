@@ -131,6 +131,8 @@
         width 30px
         height 30px
         cursor pointer
+        background url(../img/close.svg) 50% 50% no-repeat
+        background-size 100%
         
     &__item
         &:after
@@ -167,8 +169,10 @@
                 transition transition+200, transition+200
 
 .logo
-    margin-right 40px
+    margin-right 20px
     float left
+    @media (min-width 430px)
+        margin-right 40px
     &__img
         background url('../img/logo.svg')
         background-repeat no-repeat
@@ -188,8 +192,13 @@
         font-size 14px
         line-height 1.2em
         font-weight 500
+        display none
         // border-right 2px solid #d19948
         // padding-right 20px
+    @media (min-width 430px)
+        &__text
+            display inline-block
+        
 
 .btn
     background-color #de4544
