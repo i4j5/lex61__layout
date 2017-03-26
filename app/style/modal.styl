@@ -11,6 +11,7 @@
     width 100%
     // opacity 0
     visibility hidden
+    z-index 190
     &__wrapper
         display flex
         white-space nowrap
@@ -35,7 +36,7 @@
     &__dialog
         display inline-block
         vertical-align middle
-        z-index 1020
+        z-index 100
         margin auto
 
     &__close
@@ -60,14 +61,13 @@
             transition opacity 300ms 0ms, visibility 0ms 300ms
             opacity 0
             visibility hidden
-            background-color rgba(48, 55, 59, 0.8)
-            border-radius 2px
+            background-color rgba(48, 55, 59, 0.85) 
         & .modal__close
-            width 30px
-            height 30px
+            width 25px
+            height 25px
             position absolute
-            right -30px
-            top -30px
+            right 0px
+            top -35px
             display inline-block
             z-index 1050 
         & .modal__dialog
