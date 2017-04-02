@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+    meta(charset="UTF-8")
+    title Page
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="format-detection" content="telephone=no")
+    //build:css css/all.css
+    link(rel="stylesheet", href="tmp/fonts.css")
+    link(rel="stylesheet", href="tmp/modal.css")
+    link(rel="stylesheet", href="tmp/style.css")
+    //endbuild
+body.page
+    .header#header
+        .container
+            .row
+                .row__col.row__col_xs_12
+                    a(href="/").logo
+                        .logo__img
+                        .logo__text Адвокатский<br>кабинет
+                    .nav
+                        .nav__toggle#nav__toggle
+                           .nav__icon-bar
+                           .nav__icon-bar
+                           .nav__icon-bar
+                        .nav__wrapper#nav__wrapper
+                            .close.nav__close#nav__close
+                            .nav__items
+                                a.nav__item.nav__item_position_1 Услуги
+                                a.nav__item.nav__item_position_2 О компании
+                                a.nav__item.nav__item_position_3 Отзывы
+                                a.nav__item.nav__item_position_4 Контакты
+                                a.nav__item.nav__item_position_5 Статьи
+                    .header__right
+                        .header__phone.n-deco 
+                            |8 (914) 432-18-18
+                        .callme.btn Заказать звонок
+
+    .main
+        .container
+            .row
+
+                .row__col.row__col_xs_12.row__col_sm_8.row__col_md_8
+                    .main__content
+                        h1 Профессиональное разрешение семейных споров
+                        p
+                            |Наш адвокатский кабинет объединяет, пожалуй, лучшую команду адвокатов и юристов, специализирующихся на разрешении семейных споров. Наши специалисты имеют многолетний опыт работы в семейно-правовой сфере, в которой добиваются многочисленных успешных результатов в интересах своих клиентов.
+                            
+                        h5 Мы эффективно поможем Вам в следующих вопросах:
+                        ul
+                            li  С падением цен<br>21 434
+                            li  С падением цен
+                            li  такая «сетка са
+                            li  такая несколько са
+                            li  несколько «сетка са
+                       
+                        blockquote
+                            p С падением цен на услуги хостинг-провайдеров, с появлением бесплатных блоговых платформ (BlogSpot, LiveJournal, Blogger и т.д.) у вебмастеров возникла идея: «почему бы продвигать не один сайт, а сразу несколько?». Например, можно создать один основной веб-ресурс и группу других, поддерживающих его (сателлитов). С них можно было бы ссылаться на главный веб-сайт, тем самым улучшая его позиции в поисковых системах. Но такая «сетка сателлитов» также нуждается в уникальном контенте. Где же взять большое количество одинаковых и в то же время уникальных статей? Проблему решает генерация текста.
+                            ul
+                                li  С падением цен<br>21 434
+                                li  С падением цен
+                                li  такая «сетка са
+                                li  такая несколько са
+                                li  несколько «сетка са
+
+                        .form
+                            .form__title Оставьте заявку  на Бесплатную онсультацию
+                            .row
+                                .row__col.row__col_xs_12.row__col.row__col_sm_6.row__col.row__col_md_4
+                                    input(placeholder="Введите Ваше имя").input.input_name.input_icon
+                                .row__col.row__col_xs_12.row__col_sm_6.row__col_md_4
+                                    input(placeholder="Введите Ваш телефон").input.input_phone.input_icon
+                                .row__col.row__col_xs_12.row__col_md_4
+                                    .form__btn.btn Отправить
+                  
+                .row__col.row__col_xs_12.row__col_sm_4.row__col_md_3.row__col_xs-offset_0.row__col_sm-offset_0.row__col_md-offset_1
+                    .sidebar
+                        a.sidebar__link Cемейные споры
+                        a.sidebar__link Узаконивание самодельных строений
+                        a.sidebar__link Жилищные вопросы
+                        a.sidebar__link Трудовые споры
+                        a.sidebar__link Земельные споры
+                        a.sidebar__link Наследование
+                        a.sidebar__link Представительство в суде
+                        a.sidebar__link Уголовные дела
+                        a.sidebar__link Обжалование приговора
+                        a.sidebar__link Юридическое сопровождение бизнеса
+                        a.sidebar__link Споры с банками и страховыми компаниями
+                        a.sidebar__link Прочие вопросы
+    .footer
+        | © 2016 ЗаконЪ. Юридическая компания. Все права защищены.
+        br
+        | Использование материалов сайта разрешено только с согласия правообладателя.
+
+
+    //- .maps
+    //- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OHQL07SyRZQs8McMnL8OHW2WRkEoDVTS&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
+    //- 
+
+    .modal.modal_theme_grey#callme
+        .modal__wrapper
+            .modal__dialog
+                .close.modal__close
+                |dsd
+
+
+    //build:js js/all.js
+    //- script(src="tmp/offer.js")
+    script(src="tmp/modal.js")
+    script(src="tmp/nav.js")
+    script.
+        (()=>{
+
+            let modal_callme = new Modal('callme');
+            let btns_callme = document.getElementsByClassName('callme');
+
+            for (var i = btns_callme.length - 1; i >= 0; i--) {
+                btns_callme[i].addEventListener('click', () => {
+                    modal_callme.open();
+                })
+            }
+        })()
+    //endbuild
