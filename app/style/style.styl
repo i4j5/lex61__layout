@@ -772,6 +772,7 @@ map-height = 400px
             margin-bottom 30px
             
         ul
+            padding-left 10px
             margin-bottom 30px
             list-style-type none
             li
@@ -813,3 +814,48 @@ map-height = 400px
         line-height 1.2em
         display block
         margin-bottom 10px
+
+.loader
+    position fixed
+    width 100%
+    height 100%
+    background-color #fff
+    left 0
+    top 0
+    z-index 99999
+    display none 
+    &_active
+        display block
+    &__text
+        font-size 14px
+        line-height 1em
+        position absolute
+        left 50%
+        width 100px 
+        text-align center
+        margin-left -50px
+        bottom 20px
+        color #828282
+    &__spinner 
+        background url('../img/logo.svg')
+        background-repeat no-repeat
+        width 100px
+        height 100px
+        background-position center
+        background-size 60px
+        background-color #fff
+        border-radius 100px
+        position absolute
+        border 3px solid #c2984f
+        top 50%
+        left 50%
+        margin-top -50px
+        margin-left -50px
+        animation sk-scaleout 2.0s infinite ease-in-out
+@keyframes sk-scaleout
+    0%
+        transform scale(0)
+        
+    100%
+        transform scale(1.0)
+        opacity 0

@@ -11,6 +11,9 @@ head
     link(rel="stylesheet", href="tmp/style.css")
     //endbuild
 body.page
+    .loader.loader_active
+        .loader__spinner
+        .loader__text Загрузка
     .header#header
         .container
             .row
@@ -454,6 +457,14 @@ body.page
     //endbuild
 
     script.
+        window.addEventListener('load', function() { 
+            window.setTimeout(function() {
+                let loader = document.getElementsByClassName('loader')[0]
+               loader.classList.remove('loader_active')
+            }, 100);             
+        });
+
+
         (()=>{
 
             let modal_callme = new Modal('modal__callme');
